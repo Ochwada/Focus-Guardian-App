@@ -35,21 +35,21 @@ public class FocusEntry {
      * The reason associated with this focus entry.
      * This field captures the purpose or context of focus.
      */
-    @Column
+    @Column(nullable = false)
     private String reason;
 
     /**
      * The status of the focus entry.
      * Typically used to indicate whether the focus reason is active (true) or completed/inactive (false).
      */
-    @Column
+    @Column(nullable = false)
     private Boolean status;
 
     /**
      * The timestamp indicating when this focus entry was created.
      * Stored as a LocalDateTime.
      */
-    @Column
+
     private LocalDateTime createdAt;
 
     // ------- Constructors -------
@@ -86,6 +86,9 @@ public class FocusEntry {
     public Long getId() {
         return id;
     }
+    public void setId(Long id) {
+        this.id = id;
+    }
 
     public String getReason() {
         return reason;
@@ -105,6 +108,10 @@ public class FocusEntry {
 
     public LocalDateTime getCreatedAt() {
         return createdAt;
+    }
+
+    public void setCreatedAt(LocalDateTime createdAt) {
+        this.createdAt = createdAt;
     }
 
 }
