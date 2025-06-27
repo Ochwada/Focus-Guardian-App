@@ -49,8 +49,11 @@ public class FocusEntry {
      * The timestamp indicating when this focus entry was created.
      * Stored as a LocalDateTime.
      */
-
     private LocalDateTime createdAt;
+
+    //BONUS
+    @Column(nullable = false)
+    private String category;
 
     // ------- Constructors -------
 
