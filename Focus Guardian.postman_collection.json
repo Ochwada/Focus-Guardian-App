@@ -1,0 +1,91 @@
+{
+	"info": {
+		"_postman_id": "e7965585-722a-423b-aebb-74bdb9afb977",
+		"name": "Focus Guardian",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "25077704"
+	},
+	"item": [
+		{
+			"name": "http://localhost:9090/focus/stats",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"reason\": \"Did 30 minutes of meditation\",\n  \"status\": true,\n  \"category\": \"health\"\n}\n\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9090/focus/stats",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"focus",
+						"stats"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:9090/focus/newEntry",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"reason\": \"Stayed focused during math homework\",\n  \"status\": true,\n  \"category\": \"study\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9090/focus/newEntry",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"focus",
+						"newEntry"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:9090/focus/entries",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9090/focus/entries",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"focus",
+						"entries"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
